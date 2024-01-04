@@ -1,84 +1,82 @@
-body{
-    background: url(./img/background.jpeg);
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-  }
-
-.cursor{
-    height: 50px;
-    width: 50px;
-    position: absolute;
-    top: 100px;
-    left: 100px;
-    background-image: url(./img/marteau-removebg-preview.png);
-    background-size: 100% 100%;
-    transform: translate(20%, 20%);
-    transition: transform .1s;
+body {
+  background: url(./img/background.jpeg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
 }
 
-.cursor.active{
-    transform: translate(20%, 20%) rotate(45deg);
+.cursor {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  background-image: url(./img/marteau-removebg-preview.png);
+  background-size: 100% 100%;
+  transform: translate(20%, 20%);
+  transition: -webkit-transform 0.1s, transform 0.1s;
 }
 
-  .container{
-    display: -webkit-box; /* Ajout du préfixe WebKit pour Flexbox */
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: white;
-    border: 2px solid black;
-    border-radius: 25px;
-    width: 33%;
-    height: auto;
-    margin-top: 5%;
+.cursor.active {
+  -webkit-transform: translate(20%, 20%) rotate(45deg);
+  transform: translate(20%, 20%) rotate(45deg);
 }
 
-    h1{
-        font-family: 'Fraunces';
-        text-decoration: underline;
-    }
+.container {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 25px;
+  width: 33%;
+  height: auto;
+  margin-top: 5%;
+}
 
-  .board{
-    display: flex;
-    flex-wrap: wrap;
-    background: url(./img/ronaldo.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    border: 2px solid white;
-    border-radius: 25px;
-    width: 540px;
-    height: 540px;
-    margin: 25px;
+h1 {
+  font-family: 'Fraunces';
+  text-decoration: underline;
+}
 
-    div{
-        width: 180px;
-        height: 180px;
-        background-image: url(./img/toilette.png);
-        background-size: 75% 75%;
-        box-sizing: border-box;
-        border: 1px solid white;
-        background-repeat: no-repeat;
-        background-position: bottom center;
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  background: url(./img/ronaldo.jpeg) center center/cover no-repeat;
+  border: 2px solid white;
+  border-radius: 25px;
+  width: 540px;
+  height: 540px;
+  margin: 25px;
+}
 
-        img{
-            width: 100px;
-            height: 100px;
-            user-select: none;
-            -moz-user-select: none;
-            -webkit-user-drag: none;
-            -webkit-user-select: none;
-            -ms-user-select: none;
-        }
-    }
-  }
+.board div {
+  width: 180px;
+  height: 180px;
+  background-image: url(./img/toilette.png);
+  background-size: 75% 75%;
+  box-sizing: border-box;
+  border: 1px solid white;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.board div img {
+  width: 100px;
+  height: 100px;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
